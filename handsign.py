@@ -39,8 +39,8 @@ class ASLRecognizer:
         x_min, x_max = int(min(x_coords)), int(max(x_coords))
         y_min, y_max = int(min(y_coords)), int(max(y_coords))
         
-        # Add padding
-        padding = 20
+        # Add extra padding so the crop keeps the full hand shape visible.
+        padding = 60
         x_min = max(0, x_min - padding)
         y_min = max(0, y_min - padding)
         x_max = min(w, x_max + padding)
